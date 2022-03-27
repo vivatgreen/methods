@@ -69,6 +69,9 @@ public class Main {
 
     public static void tusk4() {
         String str = "aabccddefgghiijjkk";
+        validateString(str);
+    }
+    public static void validateString (String str) {
         char[] carray = str.toCharArray();
         System.out.println("Строка в виде: " + str);
         System.out.print("Повторяющиеся символы в приведенной выше строке являются: ");
