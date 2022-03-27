@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        tusk6();
+        tusk55();
     }
 
     public static void tusk1() {
@@ -97,7 +97,7 @@ public class Main {
                 System.out.print(ch[i]);
             }
     }
-    public static void tusk6() {
+    public static void tusk55() {
         int [] arr = {3, 2, 1, 6, 5};
         reverse(arr,  arr.length);
     }
