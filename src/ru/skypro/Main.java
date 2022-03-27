@@ -4,12 +4,13 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        tusk2 ();
+        tusk4();
     }
 
     public static void tusk1() {
         printIsLeapYear(2020);
     }
+
     public static void printIsLeapYear(int year) {
         boolean leapYear = isLeap(year);
         if (leapYear) {
@@ -18,6 +19,7 @@ public class Main {
             System.out.println(year + " - Не високосный год");
         }
     }
+
     public static boolean isLeap(int year) {
         return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
@@ -25,6 +27,7 @@ public class Main {
     public static void tusk2() {
         printVersionApplication(0, 2015);
     }
+
     public static int printVersionApplication(int clientOS, int deviceYear) {
         int currentYear = LocalDate.now().getYear();
         if (clientOS == 0) {
@@ -36,12 +39,47 @@ public class Main {
                 return 0;
             }
         } else {
-        } if (deviceYear < currentYear) {
+        }
+        if (deviceYear < currentYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
             return 1;
         } else {
             System.out.println("Установите обычную версию приложения для Android по ссылке");
             return 0;
+        }
+    }
+
+    public static void tusk3() {
+        System.out.println("Потребуется дней: " + calculatedDeliveryTime(95));
+    }
+
+    public static int calculatedDeliveryTime(int deliveryDistance) {
+        int deliveryTime = 0;
+        if (deliveryDistance <= 20) {
+            deliveryTime += 1;
+        }
+        if (deliveryDistance >= 20 && deliveryDistance <= 60) {
+            deliveryTime += 2;
+        }
+        if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+            deliveryTime += 3;
+        }
+        return deliveryTime;
+    }
+
+    public static void tusk4() {
+        String str = "aabccddefgghiijjkk";
+        char[] carray = str.toCharArray();
+        System.out.println("Строка в виде: " + str);
+        System.out.print("Повторяющиеся символы в приведенной выше строке являются: ");
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (carray[i] == carray[j]) {
+                    System.out.print(carray[j] + " ");
+                    break;
+                }
+
+            }
         }
     }
 }
