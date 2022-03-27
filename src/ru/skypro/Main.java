@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        tusk4();
+        tusk1();
     }
 
     public static void tusk1() {
@@ -71,7 +71,8 @@ public class Main {
         String str = "aabccddefgghiijjkk";
         validateString(str);
     }
-    public static void validateString (String str) {
+
+    public static void validateString(String str) {
         char[] carray = str.toCharArray();
         System.out.println("Строка в виде: " + str);
         System.out.print("Повторяющиеся символы в приведенной выше строке являются: ");
@@ -85,4 +86,16 @@ public class Main {
             }
         }
     }
+    public static void tusk5(){
+        String s = "3, 2, 1, 6, 5";
+        reverse(s);
+    }
+    public static void reverse(String s) {
+        char[] ch = s.toCharArray();
+        for (int i = ch.length - 1; i >= 0; i--) {
+            System.out.print(ch[i]);
+        }
+
+    }
+
 }
